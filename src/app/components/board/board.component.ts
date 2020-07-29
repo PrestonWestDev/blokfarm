@@ -1,3 +1,4 @@
+import { Board } from './../../models/Board';
 import { Terrain } from './../../models/Terrain';
 import { Component, OnInit, SimpleChanges } from '@angular/core';
 import { BoardService } from '../../services/board.service';
@@ -15,6 +16,7 @@ export class BoardComponent implements OnInit {
   board: any[];
   
   ngOnChanges(changes: SimpleChanges) {
+    
   }
 
   ngOnInit() {

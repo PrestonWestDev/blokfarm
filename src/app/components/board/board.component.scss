@@ -1,11 +1,8 @@
-.row {
-    display: flex;
-  }
-  .row > div {
-    flex: 1;
-    background: white;
-    border: 1px solid grey;
-  }
+.row > div {
+  flex: 1;
+  background: white;
+  border: 1px solid grey;
+}
 
   div.grass {
     background: rgba(61, 194, 61, 0.637);

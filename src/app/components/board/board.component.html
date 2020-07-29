@@ -1,12 +1,8 @@
 <div class="container">
-    <div class="row">
-        <div class="col">
-            <div class="row" *ngFor="let row of board">
-                <div class="col" *ngFor="let space of row">
-                    <div [ngClass]="{'dirt': space.type === 'dirt', 'grass': space.type === 'grass' }">
-                        {{space.column + '' + space.row}}
-                    </div>
-                </div>
+    <div class="row no-gutters" *ngFor="let row of board">
+        <div class="col" *ngFor="let space of row">
+            <div [ngClass]="{'dirt': space.type === 'dirt', 'grass': space.type === 'grass' }">
+                {{space.column + '' + space.row}}
             </div>
         </div>
     </div>
