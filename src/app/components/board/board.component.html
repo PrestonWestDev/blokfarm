@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="row" *ngFor="let row of rowsArr">
+                <div class="col" *ngFor="let col of colsArr">
+                    <div class="board-space">{{row + col}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="right-column">
+                <div>
+                <p>Farm Details</p>
+                <p>Total Population: {{ totalPop }}</p>
+                <p>Red Bloks: {{ redPop }}</p>
+                <p>Blue Bloks: {{ bluePop }}</p>
+                <p>Green Bloks: {{ greenPop }}</p>
+                </div>
+                <button (click)="play()" class="play-button">Play</button>
+            </div>
+        </div>
+    </div>
+</div>
