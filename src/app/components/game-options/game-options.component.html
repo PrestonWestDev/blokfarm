@@ -6,22 +6,16 @@
         <div class="col-6">
             <div class="form-group">
                 <label for="selectColCount">Columns</label>
-                <select class="form-control" id="selectColCount">
-                  <option>3</option>
-                  <option>10</option>
-                  <option>50</option>
-                  <option>100</option>
+                <select class="form-control" id="selectColCount" (change)="changeColSize($event)">
+                  <option *ngFor="let size of colSizes" [value]="size"> {{size}} </option>
                 </select>
               </div>
         </div>
         <div class="col-6">
             <div class="form-group">
                 <label for="selectRowCount">Rows</label>
-                <select class="form-control" id="selectRowCount">
-                  <option>3</option>
-                  <option>10</option>
-                  <option>50</option>
-                  <option>100</option>
+                <select class="form-control" id="selectRowCount" (change)="changeRowSize($event)">
+                    <option *ngFor="let size of rowSizes" [value]="size"> {{size}} </option>
                 </select>
               </div>
         </div>
