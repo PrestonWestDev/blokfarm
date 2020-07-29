@@ -11,11 +11,6 @@ export class BoardComponent implements OnInit {
 
   board: Terrain[][];
 
-  totalPop: number = 0;
-  redPop: number = 0;
-  bluePop: number = 0;
-  greenPop: number = 0;
-
   colsArr = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
   rowsArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   
@@ -26,8 +21,6 @@ export class BoardComponent implements OnInit {
     
   }
 
-  play() {
-    console.log("play!");
-  }
+
 
 }

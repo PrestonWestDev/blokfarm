@@ -1,3 +1,8 @@
-.board-space {
-    outline: 2px solid;
-}
+.row {
+    display: flex;
+  }
+  .row > div {
+    flex: 1;
+    background: white;
+    border: 1px solid grey;
+  }
