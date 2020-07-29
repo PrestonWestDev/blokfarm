@@ -1,5 +1,6 @@
 import { Terrain } from './../../models/Terrain';
 import { Component, OnInit, SimpleChanges } from '@angular/core';
+import { BoardService } from '../../services/board.service';
 
 @Component({
   selector: 'app-board',
@@ -9,16 +10,19 @@ import { Component, OnInit, SimpleChanges } from '@angular/core';
 
 export class BoardComponent implements OnInit {
 
-  board: Terrain[][];
+  constructor(private boardService: BoardService) {}
 
-  colsArr = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
-  rowsArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  board: any[];
   
   ngOnChanges(changes: SimpleChanges) {
   }
 
   ngOnInit() {
-    
+    // this.boardService.getBoard().subscribe(board => {
+    //   this.board = board;
+    // });
+
+    this.board = this.boardService.getBoard();
   }
 
 
